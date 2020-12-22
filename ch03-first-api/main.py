@@ -1,7 +1,6 @@
 from typing import Optional
 
 import fastapi
-import uvicorn
 
 api = fastapi.FastAPI()
 
@@ -38,6 +37,3 @@ def calculate(x: int, y: int, z: Optional[int] = None):
         'z': z,
         'value': value
     }
-
-
-uvicorn.run(api, port=8000, host="127.0.0.1")
